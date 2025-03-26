@@ -4,6 +4,16 @@ from .users_model import User, Role, db
 
 users_bp = Blueprint('users', __name__)
 
+@users_bp.route('/login')
+def login():
+    return render_template('users/login.html')
+
+@users_bp.route('/send-login-link', methods=['POST'])
+def send_login_link():
+    email = request.form.get('email')
+    # TODO: Implement email sending logic
+    return "Login link has been sent to your email (not implemented yet)", 200
+
 @users_bp.route('/users')
 def list_users():
     users = User.query.all()
