@@ -50,7 +50,11 @@
                         <tr>
                             <td class="px-6 py-4 whitespace-nowrap">{{ user.name }}</td>
                             <td class="px-6 py-4 whitespace-nowrap">{{ user.email }}</td>
-                            <td class="px-6 py-4 whitespace-nowrap">{{ user.role.name }}</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                {% for role in user.roles %}
+                                    {{ role.name }}{% if not loop.last %}, {% endif %}
+                                {% endfor %}
+                            </td>
                             <td class="px-6 py-4 whitespace-nowrap">{{ user.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
                         </tr>
                         {% endfor %}
