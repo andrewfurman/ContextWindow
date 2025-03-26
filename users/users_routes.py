@@ -1,6 +1,8 @@
 
 from flask import Blueprint, render_template, request, redirect, url_for
+from flask_mail import Message
 from .users_model import User, Role, db
+from main import mail
 
 users_bp = Blueprint('users', __name__)
 
@@ -11,8 +13,13 @@ def login():
 @users_bp.route('/send-login-link', methods=['POST'])
 def send_login_link():
     email = request.form.get('email')
-    # TODO: Implement email sending logic
-    return "Login link has been sent to your email (not implemented yet)", 200
+    msg = Message(
+        "Login Link",
+        recipients=[email],
+        body="Here is your login link (implement actual link generation)"
+    )
+    mail.send(msg)
+    return "Login link has been sent to your email", 200
 
 @users_bp.route('/users')
 def list_users():
