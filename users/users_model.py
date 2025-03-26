@@ -22,7 +22,6 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(255), unique=True, nullable=False)
     name = db.Column(db.String(255), nullable=False)
-    active = db.Column(db.Boolean())
     confirmed_at = db.Column(db.DateTime())
     fs_uniquifier = db.Column(db.String(255), unique=True)
     created_at = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
