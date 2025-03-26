@@ -12,6 +12,15 @@ db.init_app(app)
 
 with app.app_context():
     db.create_all()
+    
+    # Create default roles if they don't exist
+    from users.users_model import Role
+    default_roles = ['admin', 'pending', 'analyst']
+    for role_name in default_roles:
+        if not Role.query.filter_by(name=role_name).first():
+            role = Role(name=role_name)
+            db.session.add(role)
+    db.session.commit()
 
 app.register_blueprint(projects_bp)
 
