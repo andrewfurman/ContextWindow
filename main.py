@@ -1,4 +1,3 @@
-
 import os
 from flask import Flask, url_for
 from flask_mail import Mail
@@ -14,7 +13,6 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'super-secret')
-app.config['SECURITY_PASSWORD_SALT'] = os.environ.get('SECURITY_PASSWORD_SALT', 'super-secret-salt')
 
 # Mail settings
 app.config['MAIL_SERVER'] = os.environ.get('MAIL_SERVER', 'smtp.gmail.com')
@@ -27,7 +25,7 @@ app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_DEFAULT_SENDER')
 # Security settings
 app.config['SECURITY_REGISTERABLE'] = True
 app.config['SECURITY_CONFIRMABLE'] = True
-app.config['SECURITY_RECOVERABLE'] = True
+app.config['SECURITY_PASSWORDLESS'] = True
 app.config['SECURITY_LOGIN_WITHOUT_CONFIRMATION'] = False
 app.config['SECURITY_EMAIL_SENDER'] = os.environ.get('MAIL_DEFAULT_SENDER')
 
