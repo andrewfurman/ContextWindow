@@ -10,17 +10,25 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
 
+# Import models before creating tables
+from users.users_model import Role, User
+from projects.projects_model import Project
+
 with app.app_context():
+    # Create all tables first
     db.create_all()
     
-    # Create default roles if they don't exist
-    from users.users_model import Role
-    default_roles = ['admin', 'pending', 'analyst']
-    for role_name in default_roles:
-        if not Role.query.filter_by(name=role_name).first():
-            role = Role(name=role_name)
-            db.session.add(role)
-    db.session.commit()
+    try:
+        # Create default roles if they don't exist
+        default_roles = ['admin', 'pending', 'analyst']
+        for role_name in default_roles:
+            if not Role.query.filter_by(name=role_name).first():
+                role = Role(name=role_name)
+                db.session.add(role)
+        db.session.commit()
+    except Exception as e:
+        print(f"Error creating roles: {e}")
+        db.session.rollback()
 
 app.register_blueprint(projects_bp)
 
