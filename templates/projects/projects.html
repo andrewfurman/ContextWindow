@@ -6,8 +6,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="{{ url_for('static', filename='js/projects.js') }}"></script>
 </head>
-<body class="bg-gray-100 min-h-screen py-8">
-    <div class="max-w-4xl mx-auto px-4">
+<body class="bg-gray-100 min-h-screen">
+    {% include 'header.html' %}
+    <div class="max-w-4xl mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold mb-8">Projects</h1>
         
         <div class="bg-white rounded-lg shadow p-6 mb-8">
