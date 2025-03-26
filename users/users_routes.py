@@ -33,8 +33,11 @@ def create_user():
     email = request.form.get('email')
     role_id = request.form.get('role_id')
     
-    user = User(name=name, email=email, role_id=role_id)
-    db.session.add(user)
-    db.session.commit()
+    role = Role.query.get(role_id)
+    if role:
+        user = User(name=name, email=email)
+        user.roles.append(role)
+        db.session.add(user)
+        db.session.commit()
     
     return redirect(url_for('users.list_users'))
