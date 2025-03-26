@@ -2,7 +2,7 @@
 import os
 from flask import Flask, url_for
 from flask_mail import Mail
-from flask_security import Security, hash_password
+from flask_security import Security, hash_password, SQLAlchemyUserDatastore
 from projects.projects_routes import projects_bp
 from projects.projects_model import db
 from users.users_model import User, Role
