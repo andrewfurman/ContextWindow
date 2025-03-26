@@ -33,11 +33,15 @@ def create_user():
     email = request.form.get('email')
     role_id = request.form.get('role_id')
     
+    from main import user_datastore
+    
     role = Role.query.get(role_id)
     if role:
-        user = User(name=name, email=email)
-        user.roles.append(role)
-        db.session.add(user)
+        user = user_datastore.create_user(
+            email=email,
+            name=name,
+            roles=[role]
+        )
         db.session.commit()
     
     return redirect(url_for('users.list_users'))
