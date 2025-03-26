@@ -1,3 +1,20 @@
-# data model for projects
 
-# This database table should have columns for database ID, project name, project short description,  detailed project background, project start date, project end date, create date, and update  date.  Can you make all of the text fields just be a text data type so that none of them have  a character limit on them?
+from datetime import datetime
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
+
+class Project(db.Model):
+    __tablename__ = 'projects'
+    
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.Text, nullable=False)
+    short_description = db.Column(db.Text)
+    background = db.Column(db.Text)
+    start_date = db.Column(db.DateTime)
+    end_date = db.Column(db.DateTime)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False)
+
+    def __repr__(self):
+        return f'<Project {self.name}>'
