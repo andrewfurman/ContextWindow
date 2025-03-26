@@ -11,6 +11,32 @@
         <h1 class="text-3xl font-bold mb-8">Projects</h1>
         
         <div class="bg-white rounded-lg shadow p-6 mb-8">
+            <h2 class="text-xl font-semibold mb-4">Projects List</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full table-auto">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Name</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Description</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Start Date</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">End Date</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        {% for project in projects %}
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">{{ project.name }}</td>
+                            <td class="px-6 py-4">{{ project.short_description }}</td>
+                            <td class="px-6 py-4 whitespace-nowrap">{{ project.start_date.strftime('%Y-%m-%d') if project.start_date else '-' }}</td>
+                            <td class="px-6 py-4 whitespace-nowrap">{{ project.end_date.strftime('%Y-%m-%d') if project.end_date else '-' }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-8">
             <h2 class="text-xl font-semibold mb-4">Add New Project</h2>
             <form action="{{ url_for('projects.add_project') }}" method="POST" class="space-y-4">
                 <div>
