@@ -1,3 +1,5 @@
+// This is JavaScript content that is specific to the projects.html page.
+
 
 // Projects page JavaScript functionality
 document.addEventListener('DOMContentLoaded', function() {
