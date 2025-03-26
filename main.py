@@ -30,7 +30,10 @@ with app.app_context():
         print(f"Error creating roles: {e}")
         db.session.rollback()
 
+from users.users_routes import users_bp
+
 app.register_blueprint(projects_bp)
+app.register_blueprint(users_bp)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
