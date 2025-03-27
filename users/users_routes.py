@@ -6,9 +6,9 @@ from main import mail
 
 users_bp = Blueprint('users', __name__)
 
-@users_bp.route('/login')
+@users_bp.route('/users_login')
 def login():
-    return render_template('users/login.html')
+    return render_template('users/users_login.html')
 
 @users_bp.route('/send-login-link', methods=['POST'])
 def send_login_link():
