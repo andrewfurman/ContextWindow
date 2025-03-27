@@ -1,0 +1,532 @@
+### FILE TREE (SELECTED)
+
+├─ .local
+|  └─ share
+|     └─ virtualenv
+|        └─ py_info
+|           └─ 1
+|              └─ c1a7e9d60bee163ce8bd44fff8649ad2c986f10166f9c61d4c738e17f523845a.json (69 lines)
+├─ .upm
+|  └─ store.json (2 lines)
+├─ projects
+|  └─ projects_routes.py (33 lines)
+|  ├─ projects_model.py (21 lines)
+├─ static
+|  └─ js
+|     └─ projects.js (9 lines)
+├─ templates
+|  ├─ projects
+|  |  └─ projects.html (69 lines)
+|  ├─ users
+|  |  ├─ users.html (68 lines)
+|  |  └─ login.html (35 lines)
+|  └─ header.html (12 lines)
+├─ users
+|  └─ users_routes.py (48 lines)
+|  ├─ users_model.py (33 lines)
+├─ main.py (66 lines)
+
+
+### FILE CONTENTS
+
+FILE: .local/share/virtualenv/py_info/1/c1a7e9d60bee163ce8bd44fff8649ad2c986f10166f9c61d4c738e17f523845a.json
+----------------------------------------
+{
+  "content": {
+    "_creators": null,
+    "architecture": 64,
+    "base_exec_prefix": "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10",
+    "base_prefix": "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10",
+    "distutils_install": {},
+    "exec_prefix": "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10",
+    "executable": "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/bin/python3.11",
+    "file_system_encoding": "utf-8",
+    "has_venv": true,
+    "implementation": "CPython",
+    "max_size": 9223372036854775807,
+    "original_executable": "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/bin/python3.11",
+    "os": "posix",
+    "path": [
+      "/nix/store/vj3hs53nwlamzw031a06xc5d11ihjzlk-poetry-in-venv/env/lib/python3.11/site-packages/virtualenv/discovery",
+      "/nix/store/lc7qv2ldzrs1aq3hbyzmbgvn0h2w26pl-sitecustomize/lib/python/site-packages",
+      "/nix/store/dfg63lldbvcj207iyr9z0xw21d8ax02n-python3.11-pip-24.0/lib/python3.11/site-packages",
+      "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python311.zip",
+      "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11",
+      "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11/lib-dynload",
+      "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages",
+      "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11/site-packages",
+      "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages",
+      "/nix/store/wblvmd5y7izx0z10d1w7ga7zc4apjxmb-python3.11-setuptools-75.1.1/lib/python3.11/site-packages"
+    ],
+    "platform": "linux",
+    "prefix": "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10",
+    "real_prefix": null,
+    "stdout_encoding": "utf-8",
+    "sysconfig": {
+      "makefile_filename": "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11/config-3.11-x86_64-linux-gnu/Makefile"
+    },
+    "sysconfig_paths": {
+      "data": "{base}",
+      "include": "{installed_base}/include/python{py_version_short}{abiflags}",
+      "platlib": "{platbase}/{platlibdir}/python{py_version_short}/site-packages",
+      "platstdlib": "{platbase}/{platlibdir}/python{py_version_short}",
+      "purelib": "{base}/lib/python{py_version_short}/site-packages",
+      "scripts": "{base}/bin",
+      "stdlib": "{installed_base}/{platlibdir}/python{py_version_short}"
+    },
+    "sysconfig_scheme": "venv",
+    "sysconfig_vars": {
+      "PYTHONFRAMEWORK": "",
+      "abiflags": "",
+      "base": "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10",
+      "installed_base": "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10",
+      "platbase": "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10",
+      "platlibdir": "lib",
+      "py_version_short": "3.11"
+    },
+    "system_executable": "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/bin/python3.11",
+    "system_stdlib": "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11",
+    "system_stdlib_platform": "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11",
+    "version": "3.11.10 (main, Sep  7 2024, 01:03:31) [GCC 13.3.0]",
+    "version_info": {
+      "major": 3,
+      "micro": 10,
+      "minor": 11,
+      "releaselevel": "final",
+      "serial": 0
+    },
+    "version_nodot": "311"
+  },
+  "path": "/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/bin/python3.11",
+  "st_mtime": 0.0
+}
+
+FILE: .upm/store.json
+----------------------------------------
+{"version":2,"languages":{"python-python3-poetry":{"specfileHash":"b86a4e62389f22c3b26b54d06496c95f","lockfileHash":"a62677a2823b7d8afa7ef277dd6caba9"}}}
+
+
+FILE: projects/projects_routes.py
+----------------------------------------
+
+from flask import Blueprint, render_template, request, redirect, url_for
+from datetime import datetime
+from .projects_model import db, Project
+
+projects_bp = Blueprint('projects', __name__)
+
+@projects_bp.route('/')
+def index():
+    projects = Project.query.all()
+    return render_template('projects/projects.html', projects=projects)
+
+@projects_bp.route('/add', methods=['POST'])
+def add_project():
+    name = request.form.get('name')
+    short_description = request.form.get('short_description')
+    background = request.form.get('background')
+    start_date = request.form.get('start_date')
+    end_date = request.form.get('end_date')
+
+    project = Project(
+        name=name,
+        short_description=short_description,
+        background=background,
+        start_date=datetime.strptime(start_date, '%Y-%m-%d') if start_date else None,
+        end_date=datetime.strptime(end_date, '%Y-%m-%d') if end_date else None
+    )
+
+    db.session.add(project)
+    db.session.commit()
+
+    return redirect(url_for('projects.index'))
+
+
+FILE: projects/projects_model.py
+----------------------------------------
+
+from datetime import datetime
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
+
+class Project(db.Model):
+    __tablename__ = 'projects'
+    
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.Text, nullable=False)
+    short_description = db.Column(db.Text)
+    background = db.Column(db.Text)
+    start_date = db.Column(db.DateTime)
+    end_date = db.Column(db.DateTime)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False)
+
+    def __repr__(self):
+        return f'<Project {self.name}>'
+
+
+FILE: static/js/projects.js
+----------------------------------------
+// This is JavaScript content that is specific to the projects.html page.
+
+
+// Projects page JavaScript functionality
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Projects page loaded');
+    // Add your JavaScript functionality here
+});
+
+
+FILE: templates/projects/projects.html
+----------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="{{ url_for('static', filename='js/projects.js') }}"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    {% include 'header.html' %}
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-8">Projects</h1>
+        
+        <div class="bg-white rounded-lg shadow p-6 mb-8">
+            <h2 class="text-xl font-semibold mb-4">Projects List</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full table-auto">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Name</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Description</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Start Date</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">End Date</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        {% for project in projects %}
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">{{ project.name }}</td>
+                            <td class="px-6 py-4">{{ project.short_description }}</td>
+                            <td class="px-6 py-4 whitespace-nowrap">{{ project.start_date.strftime('%Y-%m-%d') if project.start_date else '-' }}</td>
+                            <td class="px-6 py-4 whitespace-nowrap">{{ project.end_date.strftime('%Y-%m-%d') if project.end_date else '-' }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-8">
+            <h2 class="text-xl font-semibold mb-4">Add New Project</h2>
+            <form action="{{ url_for('projects.add_project') }}" method="POST" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Short Description</label>
+                    <input type="text" name="short_description" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Background</label>
+                    <textarea name="background" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border"></textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Start Date</label>
+                    <input type="date" name="start_date" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">End Date</label>
+                    <input type="date" name="end_date" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border">
+                </div>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Project</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+FILE: templates/users/users.html
+----------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    {% include 'header.html' %}
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-8">Users</h1>
+        
+        <div class="bg-white rounded-lg shadow p-6 mb-8">
+            <h2 class="text-xl font-semibold mb-4">Add New User</h2>
+            <form action="{{ url_for('users.create_user') }}" method="POST" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Role</label>
+                    <select name="role_id" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border">
+                        {% for role in roles %}
+                        <option value="{{ role.id }}">{{ role.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add User</button>
+            </form>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-4">Users List</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full table-auto">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Name</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Email</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Role</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Created At</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        {% for user in users %}
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">{{ user.name }}</td>
+                            <td class="px-6 py-4 whitespace-nowrap">{{ user.email }}</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                {% for role in user.roles %}
+                                    {{ role.name }}{% if not loop.last %}, {% endif %}
+                                {% endfor %}
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">{{ user.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+FILE: templates/users/login.html
+----------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - ContextWindow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    {% include 'header.html' %}
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-8">Login</h1>
+        
+        <div class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-4">Send Login Link</h2>
+            <form action="{{ url_for('users.send_login_link') }}" method="POST" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        required 
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border focus:ring-2 focus:ring-blue-500"
+                        placeholder="Enter your email">
+                </div>
+                <button 
+                    type="submit" 
+                    class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150">
+                    Send Login Link
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+FILE: templates/header.html
+----------------------------------------
+
+<div class="bg-blue-900 text-white w-full py-4 px-8">
+    <div class="flex justify-between items-center max-w-7xl mx-auto">
+        <h1 class="text-2xl font-bold">ContextWindow</h1>
+        <nav>
+            <a href="{{ url_for('projects.index') }}" class="text-white hover:text-blue-200 ml-6">Projects</a>
+            <a href="{{ url_for('users.list_users') }}" class="text-white hover:text-blue-200 ml-6">Users</a>
+            <a href="{{ url_for('users.login') }}" class="text-white hover:text-blue-200 ml-6">Login</a>
+        </nav>
+    </div>
+</div>
+
+
+FILE: users/users_routes.py
+----------------------------------------
+
+from flask import Blueprint, render_template, request, redirect, url_for
+from flask_mail import Message
+from .users_model import User, Role, db
+from main import mail
+
+users_bp = Blueprint('users', __name__)
+
+@users_bp.route('/login')
+def login():
+    return render_template('users/login.html')
+
+@users_bp.route('/send-login-link', methods=['POST'])
+def send_login_link():
+    email = request.form.get('email')
+    msg = Message(
+        "Login Link",
+        recipients=[email],
+        body="Here is your login link (implement actual link generation)"
+    )
+    mail.send(msg)
+    return "Login link has been sent to your email", 200
+
+@users_bp.route('/users')
+def list_users():
+    users = User.query.all()
+    roles = Role.query.all()
+    return render_template('users/users.html', users=users, roles=roles)
+
+@users_bp.route('/users/create', methods=['POST'])
+def create_user():
+    name = request.form.get('name')
+    email = request.form.get('email')
+    role_id = request.form.get('role_id')
+    
+    from main import user_datastore
+    
+    role = Role.query.get(role_id)
+    if role:
+        user = user_datastore.create_user(
+            email=email,
+            name=name,
+            roles=[role]
+        )
+        db.session.commit()
+    
+    return redirect(url_for('users.list_users'))
+
+
+FILE: users/users_model.py
+----------------------------------------
+
+from datetime import datetime
+from flask_security import UserMixin, RoleMixin
+from projects.projects_model import db
+
+roles_users = db.Table('roles_users',
+    db.Column('user_id', db.Integer(), db.ForeignKey('users.id')),
+    db.Column('role_id', db.Integer(), db.ForeignKey('roles.id'))
+)
+
+class Role(db.Model, RoleMixin):
+    __tablename__ = 'roles'
+    
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), unique=True, nullable=False)
+    description = db.Column(db.String(255))
+    created_at = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+
+class User(db.Model, UserMixin):
+    __tablename__ = 'users'
+    
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(255), unique=True, nullable=False)
+    password = db.Column(db.String(255))
+    name = db.Column(db.String(255), nullable=False)
+    active = db.Column(db.Boolean(), default=True)
+    confirmed_at = db.Column(db.DateTime())
+    fs_uniquifier = db.Column(db.String(255), unique=True, nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    
+    roles = db.relationship('Role', secondary=roles_users,
+                          backref=db.backref('users', lazy='dynamic'))
+
+
+FILE: main.py
+----------------------------------------
+import os
+from flask import Flask, url_for
+from flask_mail import Mail
+from flask_security import Security, hash_password, SQLAlchemyUserDatastore
+from projects.projects_routes import projects_bp
+from projects.projects_model import db
+from users.users_model import User, Role
+
+mail = Mail()
+security = Security()
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'super-secret')
+
+# Mail settings
+app.config['MAIL_SERVER'] = os.environ.get('MAIL_SERVER', 'smtp.gmail.com')
+app.config['MAIL_PORT'] = int(os.environ.get('MAIL_PORT', 587))
+app.config['MAIL_USE_TLS'] = os.environ.get('MAIL_USE_TLS', 'true').lower() == 'true'
+app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_DEFAULT_SENDER')
+
+# Security settings
+app.config['SECURITY_REGISTERABLE'] = True
+app.config['SECURITY_CONFIRMABLE'] = True
+app.config['SECURITY_PASSWORDLESS'] = True
+app.config['SECURITY_LOGIN_WITHOUT_CONFIRMATION'] = False
+app.config['SECURITY_EMAIL_SENDER'] = os.environ.get('MAIL_DEFAULT_SENDER')
+
+db.init_app(app)
+mail.init_app(app)
+
+# Initialize Flask-Security
+from users.users_model import User, Role
+user_datastore = SQLAlchemyUserDatastore(db, User, Role)
+security.init_app(app, user_datastore)
+
+# Import models before creating tables
+from projects.projects_model import Project
+
+with app.app_context():
+    # Create all tables first
+    db.create_all()
+    
+    try:
+        # Create default roles if they don't exist
+        default_roles = ['admin', 'pending', 'analyst']
+        for role_name in default_roles:
+            if not Role.query.filter_by(name=role_name).first():
+                role = Role(name=role_name)
+                db.session.add(role)
+        db.session.commit()
+    except Exception as e:
+        print(f"Error creating roles: {e}")
+        db.session.rollback()
+
+from users.users_routes import users_bp
+
+app.register_blueprint(projects_bp)
+app.register_blueprint(users_bp)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+
+
