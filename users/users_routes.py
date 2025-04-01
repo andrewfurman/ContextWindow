@@ -23,9 +23,12 @@ def send_login_link():
         )
         db.session.commit()
     
-    from main import security
-    login_token = security.login_token_generator(user)
-    login_link = url_for('users.login_with_token', token=login_token, _external=True)
+    from flask_security.utils import hash_password
+    from flask_security import send_login_instructions
+    
+    # Send login instructions which includes the magic link
+    send_login_instructions(user)
+    return "Login link has been sent to your email", 200
     
     msg = Message(
         "Your Login Link",
