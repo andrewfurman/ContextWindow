@@ -38,6 +38,8 @@ app.config['SECURITY_CONFIRMABLE'] = True
 app.config['SECURITY_PASSWORDLESS'] = True
 app.config['SECURITY_LOGIN_WITHOUT_CONFIRMATION'] = False
 app.config['SECURITY_EMAIL_SENDER'] = os.environ.get('MAIL_DEFAULT_SENDER')
+app.config['SECURITY_LOGIN_WITHIN'] = '24 hours'  # Login link validity duration
+app.config['SECURITY_TOKEN_MAX_AGE'] = 86400  # 24 hours in seconds
 
 db.init_app(app)
 mail.init_app(app)

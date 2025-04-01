@@ -13,13 +13,37 @@ def login():
 @users_bp.route('/send-login-link', methods=['POST'])
 def send_login_link():
     email = request.form.get('email')
+    user = User.query.filter_by(email=email).first()
+    
+    if not user:
+        from main import user_datastore
+        user = user_datastore.create_user(
+            email=email,
+            name=email.split('@')[0]  # Simple default name from email
+        )
+        db.session.commit()
+    
+    from main import security
+    login_token = security.login_token_generator(user)
+    login_link = url_for('users.login_with_token', token=login_token, _external=True)
+    
     msg = Message(
-        "Login Link",
+        "Your Login Link",
         recipients=[email],
-        body="Here is your login link (implement actual link generation)"
+        body=f"Click this link to log in (valid for 24 hours): {login_link}"
     )
     mail.send(msg)
     return "Login link has been sent to your email", 200
+
+@users_bp.route('/login/<token>')
+def login_with_token(token):
+    from main import security
+    user = security.login_token_verifier(token)
+    if user:
+        from flask_security.utils import login_user
+        login_user(user)
+        return redirect(url_for('projects.index'))
+    return "Invalid or expired login link", 400
 
 @users_bp.route('/users')
 def list_users():
