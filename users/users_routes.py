@@ -24,10 +24,10 @@ def send_login_link():
         db.session.commit()
     
     from flask_security.utils import hash_password, get_token_status
-    from flask_security import login_token_status
+    from flask_security import get_token_status
     
-    # Generate login token
-    token = user_datastore.login_token_status(user)
+    # Generate login token using Flask-Security's built-in method
+    token = user_datastore.get_login_token(user)
     login_link = url_for('users.login_with_token', token=token, _external=True)
     
     msg = Message(
